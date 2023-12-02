@@ -1,0 +1,65 @@
+html,
+body,
+#map {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-geojson-content>div.result {
+    width: 400px;
+}
+
+.m-popup>div.m-content>div.m-body>div.m-geojson-content>div.result>table {
+    padding: 1px;
+    border-spacing: 0px !important;
+}
+
+div.m-body>div>div.result>table {
+    width: auto;
+}
+
+div.m-body>div>div.result>table>tbody {
+    font-family: "Source Sans Pro", sans-serif;
+    width: 100% !important;
+    font-size: 12px !important;
+}
+
+div.m-body>div>div.result>table>tbody>tr>td.key {
+    color: #FFFFFF !important;
+    background-color: #087021 !important;
+    width: 40% !important;
+    white-space: wrap !important;
+
+}
+
+div.m-body>div>div.result>table>tbody>tr>td.value {
+    color: #087021 !important;
+    width: 60% !important;
+    white-space: wrap !important;
+}
+
+.m-popup-closer {
+    color: #087021 !important;
+}
+
+#selectedBaseLayer {
+    border: 3px solid #087021
+}
+
+.m-selector-baselayer-layers-image-seleccionada {
+    border: 3px solid #087021
+}
+
+.m-areas>div.m-area>div.m-panel.m-layerswitcher.collapsed>button.m-panel-btn {
+    color: #FFFFFF;
+    background-color: #087021 !important;
+}
+.m-areas>div.m-area>div.m-panel.m-layerswitcher>button.m-panel-btn {
+    background-color: #087021;
+}
+
+button#btnFullView {
+    background-color: #087021;
+}

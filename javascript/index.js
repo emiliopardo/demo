@@ -96,7 +96,7 @@ const mapajs = M.map({
 mapajs.setBGColorContainer("white");
 
 const configSimplebaselayerselector = { displayBaseLayersInLayerSwitcher: false }
-const configFullViewMap = {position: 'TL'}
+const configFullViewMap = {position: "TL"}
 const pluginSimplebaselayerselector = new M.plugin.Simplebaselayerselector(configSimplebaselayerselector);
 const pluginFullViewMap = new M.plugin.FullViewMap(configFullViewMap);
 

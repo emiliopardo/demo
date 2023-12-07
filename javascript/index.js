@@ -61,6 +61,42 @@ const salud = new M.layer.WFS({
 
 salud.setStyle(clusterStyle);
 
+const style_osm_bright = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-bright/wmts.xml",
+    name: "style-osm-bright",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-bright",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+style_osm_bright.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-bright/8/124/99.png")
+
+const mapa_andalucia = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia/wmts.xml",
+    name: "mapa_andalucia",
+    matrixSet: "EPSG:3857",
+    legend: "mapa_andalucia",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+mapa_andalucia.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia/8/124/99.png")
+
+const mapa_andalucia_gray_scale = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_gray_scale_fondo_negro/wmts.xml",
+    name: "mapa_andalucia_gray_scale_fondo_negro",
+    matrixSet: "EPSG:3857",
+    legend: "mapa_andalucia_gray_scale_fondo_negro",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+mapa_andalucia_gray_scale.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_gray_scale_fondo_negro/8/124/99.png")
+
 const callejero = new M.layer.WMTS({
     url: "https://www.ign.es/wmts/ign-base",
     name: "IGNBaseTodo",
@@ -84,19 +120,18 @@ const ortofoto = new M.layer.WMTS({
 
 ortofoto.setLegendURL("./legends/ortofoto.png")
 
-
 const mapajs = M.map({
     container: "map",
     controls: ["scale", "scaleline", "panzoombar", "mouse"],
     projection: "EPSG:3857*m",
     zoom: 6,
-    layers: [callejero, ortofoto]
+    layers: [callejero, ortofoto, mapa_andalucia_gray_scale, mapa_andalucia, style_osm_bright]
 });
 
 mapajs.setBGColorContainer("white");
 
 const configSimplebaselayerselector = { displayBaseLayersInLayerSwitcher: false }
-const configFullViewMap = {position: "TL"}
+const configFullViewMap = { position: "TL" }
 const pluginSimplebaselayerselector = new M.plugin.Simplebaselayerselector(configSimplebaselayerselector);
 const pluginFullViewMap = new M.plugin.FullViewMap(configFullViewMap);
 

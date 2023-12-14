@@ -61,18 +61,6 @@ const salud = new M.layer.WFS({
 
 salud.setStyle(clusterStyle);
 
-const style_osm_bright = new M.layer.WMTS({
-    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-bright/wmts.xml",
-    name: "style-osm-bright",
-    matrixSet: "EPSG:3857",
-    legend: "style-osm-bright",
-    transparent: false
-}, {
-    format: "image/jpeg"
-});
-
-style_osm_bright.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-bright/8/124/99.png")
-
 const mapa_andalucia = new M.layer.WMTS({
     url: "https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia/wmts.xml",
     name: "mapa_andalucia",
@@ -83,9 +71,21 @@ const mapa_andalucia = new M.layer.WMTS({
     format: "image/jpeg"
 });
 
-mapa_andalucia.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia/8/124/99.png")
+mapa_andalucia.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia/8/124/99.png");
 
 const mapa_andalucia_gray_scale = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_gray_scale/wmts.xml",
+    name: "mapa_andalucia_gray_scale",
+    matrixSet: "EPSG:3857",
+    legend: "mapa_andalucia_gray_scale",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+mapa_andalucia_gray_scale.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_gray_scale/8/124/99.png");
+
+const mapa_andalucia_gray_scale_fondo_negro = new M.layer.WMTS({
     url: "https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_gray_scale_fondo_negro/wmts.xml",
     name: "mapa_andalucia_gray_scale_fondo_negro",
     matrixSet: "EPSG:3857",
@@ -95,7 +95,115 @@ const mapa_andalucia_gray_scale = new M.layer.WMTS({
     format: "image/jpeg"
 });
 
-mapa_andalucia_gray_scale.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_gray_scale_fondo_negro/8/124/99.png")
+mapa_andalucia_gray_scale_fondo_negro.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_gray_scale_fondo_negro/8/124/99.png");
+
+const mapa_andalucia_sepia_scale = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_sepia_scale/wmts.xml",
+    name: "mapa_andalucia_sepia_scale",
+    matrixSet: "EPSG:3857",
+    legend: "mapa_andalucia_sepia_scale",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+mapa_andalucia_sepia_scale.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/mapa_andalucia_sepia_scale/8/124/99.png");
+
+const style_basic_3d = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-basic-3d/wmts.xml",
+    name: "style-osm-basic-3d",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-basic-3d",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+style_basic_3d.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-basic-3d/8/124/99.png");
+
+const osm_liberty = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-liberty/wmts.xml",
+    name: "style-osm-liberty",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-liberty",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+osm_liberty.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-liberty/8/124/99.png");
+
+const style_toner = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-toner/wmts.xml",
+    name: "style-osm-toner",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-toner",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+style_toner.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-toner/8/124/99.png");
+
+const style_fiord = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-fiord/wmts.xml",
+    name: "style-osm-fiord",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-fiord",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+style_fiord.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-fiord/8/124/99.png");
+
+const style_osm_bright = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-bright/wmts.xml",
+    name: "style-osm-bright",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-bright",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+style_osm_bright.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-bright/8/124/99.png");
+
+const style_basic = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-basic/wmts.xml",
+    name: "style-osm-basic",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-basic",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+style_basic.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-basic/8/124/99.png");
+
+const style_positron = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-positron/wmts.xml",
+    name: "style-osm-positron",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-positron",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+style_positron.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-positron/8/124/99.png");
+
+const style_dark_matter = new M.layer.WMTS({
+    url: "https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-dark-matter/wmts.xml",
+    name: "style-osm-dark-matter",
+    matrixSet: "EPSG:3857",
+    legend: "style-osm-dark-matter",
+    transparent: false
+}, {
+    format: "image/jpeg"
+});
+
+style_dark_matter.setLegendURL("https://ws205.juntadeandalucia.es/tileserver/styles/style-osm-dark-matter/8/124/99.png");
 
 const callejero = new M.layer.WMTS({
     url: "https://www.ign.es/wmts/ign-base",
@@ -125,7 +233,7 @@ const mapajs = M.map({
     controls: ["scale", "scaleline", "panzoombar", "mouse"],
     projection: "EPSG:3857*m",
     zoom: 6,
-    layers: [callejero, ortofoto, mapa_andalucia_gray_scale, mapa_andalucia, style_osm_bright]
+    layers: [callejero, ortofoto, mapa_andalucia, mapa_andalucia_gray_scale, mapa_andalucia_gray_scale_fondo_negro, mapa_andalucia_sepia_scale, style_dark_matter, style_positron, style_basic, style_osm_bright, style_fiord, style_toner, osm_liberty, style_basic_3d]
 });
 
 mapajs.setBGColorContainer("white");

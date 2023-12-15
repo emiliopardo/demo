@@ -1,3 +1,6 @@
+//se añade modificación de configuración para llegar al nivel de zoom deseado
+M.config.ZOOM_LEVELS=18
+
 const clusterOptions = {
     ranges: [
 
